@@ -1,5 +1,5 @@
 <template>
-    <div>推荐</div>
+    <div class="recommend">推荐</div>
 </template>
 
 <script>
@@ -9,5 +9,9 @@
 </script>
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
-
+.recommend {
+    background-color: gold;
+    width: 100%;
+    height: 100%;
+}
 </style>

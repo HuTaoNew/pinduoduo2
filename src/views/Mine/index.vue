@@ -1,5 +1,5 @@
 <template>
-    <div>个人中心</div>
+    <div class="mine">个人中心</div>
 </template>
 
 <script>
@@ -9,5 +9,9 @@
 </script>
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
-
+.mine {
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+}
 </style>
