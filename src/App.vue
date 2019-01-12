@@ -1,10 +1,14 @@
 <template>
   <div id="app">
+    main
     <router-view/>
   </div>
 </template>
 
 <style>
+  app{
+    background-color: red;
+  }
 /*#app {*/
   /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
   /*-webkit-font-smoothing: antialiased;*/
