@@ -18,15 +18,20 @@
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     </div>
+    <hot-nav></hot-nav>
   </div>
 </template>
 
 <script>
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+import HotNav from '@/components/HotNav'
 
 export default {
   name: "Popular",
+  components:{
+    HotNav
+  },
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
       // Optional parameters
@@ -47,7 +52,7 @@ export default {
 .popular {
   width: 100%;
   height: 100%;
-  background: gold;
+  background: #f5f5f5;
   padding-top: 46px;
 //   display: flex;
 //   justify-content: center;
