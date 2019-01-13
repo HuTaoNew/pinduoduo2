@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <ly-tab v-model="selectedId" :items="items" :options="options"></ly-tab>
+    <ly-tab
+      class="lytab"
+      v-model="selectedId"
+      :items="items"
+      :options="options"
+      @change="handleNav"
+    ></ly-tab>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -24,18 +31,40 @@ export default {
         { label: "电器" }
       ],
       options: {
-        activeColor: "#1d98bd"
+        activeColor: "#e9232d"
         // 可在这里指定labelKey为你数据里文字对应的字段
-      }
+      },
+      subRoute: [
+        "/home/popular",
+        "/home/clothing",
+        "/home/shoes",
+        "/home/monandbaby",
+        "/home/department",
+        "/home/food",
+        "/home/underwear",
+        "/home/mens",
+        "/home/electric"
+      ]
     };
   },
-  components: {}
+  methods: {
+    handleNav(item, index) {
+      this.$router.replace(this.subRoute[index]);
+    }
+  }
 };
 </script>
 
 <style scoped>
 .home {
+  background: #f5f5f5;
   width: 100%;
   height: 100%;
+}
+
+.lytab {
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 </style>

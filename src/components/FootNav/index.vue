@@ -2,24 +2,24 @@
   <div class="foot-nav">
     <div class="foot-items">
       <div class="foot-item" @click="switchTo('/home')">
-        <img :src="'/home' === $route.path ? imgArr[0].selected : imgArr[0].normal" alt>
-        <div :class="{selected:'/home' === $route.path}">首页</div>
+        <img :src="$route.path.includes('/home') ? imgArr[0].selected : imgArr[0].normal" alt>
+        <div :class="{selected:$route.path.includes('/home')}">首页</div>
       </div>
       <div class="foot-item" @click="switchTo('/recommend')">
-        <img :src="'/recommend' === $route.path ? imgArr[1].selected : imgArr[1].normal" alt>
-        <div :class="{selected:'/recommend' === $route.path}">推荐</div>
+        <img :src="$route.path.includes('/recommend') ? imgArr[1].selected : imgArr[1].normal" alt>
+        <div :class="{selected:$route.path.includes('/recommend')}">推荐</div>
       </div>
       <div class="foot-item" @click="switchTo('/search')">
-        <img :src="'/search' === $route.path ? imgArr[2].selected : imgArr[2].normal" alt>
-        <div :class="{selected:'/search' === $route.path}">搜索</div>
+        <img :src="$route.path.includes('/search') ? imgArr[2].selected : imgArr[2].normal" alt>
+        <div :class="{selected:$route.path.includes('/search')}">搜索</div>
       </div>
       <div class="foot-item" @click="switchTo('/chat')">
-        <img :src="'/chat' === $route.path ? imgArr[3].selected : imgArr[3].normal" alt>
-        <div :class="{selected:'/chat' === $route.path}">聊天</div>
+        <img :src="$route.path.includes('/chat') ? imgArr[3].selected : imgArr[3].normal" alt>
+        <div :class="{selected:$route.path.includes('/chat')}">聊天</div>
       </div>
       <div class="foot-item" @click="switchTo('/mine')">
-        <img :src="'/mine' === $route.path ? imgArr[4].selected : imgArr[4].normal" alt>
-        <div :class="{selected:'/mine' === $route.path}">个人中心</div>
+        <img :src="$route.path.includes('/mine') ? imgArr[4].selected : imgArr[4].normal" alt>
+        <div :class="{selected:$route.path.includes('/mine')}">个人中心</div>
       </div>
     </div>
   </div>
