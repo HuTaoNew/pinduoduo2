@@ -18,7 +18,13 @@
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     </div>
-    <hot-nav></hot-nav>
+    <HotNav></HotNav>
+
+    <div class="hot-ad">
+      <img src="@/common/img/hot_ad/home_ad.gif" alt="" width="100%">
+    </div>
+    
+    <Shoplist></Shoplist>
   </div>
 </template>
 
@@ -26,16 +32,16 @@
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import HotNav from '@/components/HotNav'
+import Shoplist from '@/components/Shoplist'
 
 export default {
   name: "Popular",
   components:{
-    HotNav
+    HotNav,
+    Shoplist
   },
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
-      // Optional parameters
-      // direction: 'vertical',
       autoplay: true,
       loop: true,
 
@@ -54,8 +60,5 @@ export default {
   height: 100%;
   background: #f5f5f5;
   padding-top: 46px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
 }
 </style>

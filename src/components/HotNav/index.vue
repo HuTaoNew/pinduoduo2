@@ -140,8 +140,6 @@ export default {
       }else if (this.barMoveWidth >= this.bgBarW - this.barXWidth){
         this.barMoveWidth = this.bgBarW - this.barXWidth;
       }
-
-
     },
     // 结束触摸
     handleTouchEnd(){
@@ -154,6 +152,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hot-ad {
+  background-color: #fff;
+  margin: 2px 0;
+  padding: 2px, 0;
+}
 .hot-nav-botton {
   width: 100px;
   height: 2px;
@@ -184,6 +187,7 @@ export default {
   width: 100%;
   overflow-x: scroll;
 }
+
 .hot-nav-content::-webkit-scrollbar {
   display: none;
 }
